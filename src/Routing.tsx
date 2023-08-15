@@ -11,14 +11,14 @@ export default function Routing() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Layout />} />
-        <Route path='basic-example' element={<BasicExample />} />
-        <Route path='track-document-scroll' element={<DocumentScrollExample />} />
-        <Route path='custom-element' element={<CustomElementExample />} />
-        <Route path='element-offsets-svg' element={<ElementWithOffsetsExample />} />
-        <Route path='element-events-viewport' element={<ElementEventsViewportExample />} />
-        <Route path='element-external-reference' element={<ElementExternalReferenceExample />} />
-        <Route path='*' element={<NoMatch />} />
+        <Route path='/react-scrollsy-examples' element={<Layout />} />
+        <Route path='/react-scrollsy-examples/basic-example' element={<BasicExample />} />
+        <Route path='/react-scrollsy-examples/track-document-scroll' element={<DocumentScrollExample />} />
+        <Route path='/react-scrollsy-examples/custom-element' element={<CustomElementExample />} />
+        <Route path='/react-scrollsy-examples/element-offsets-svg' element={<ElementWithOffsetsExample />} />
+        <Route path='/react-scrollsy-examples/element-events-viewport' element={<ElementEventsViewportExample />} />
+        <Route path='/react-scrollsy-examples/element-external-reference' element={<ElementExternalReferenceExample />} />
+        {/* <Route path='*' element={<NoMatch />} /> */}
       </Routes>
     </div>
   );
@@ -30,26 +30,26 @@ function Layout() {
       <nav>
         <ul>
           <li>
-            <Link to='/basic-example'>Basic example (no react-spring, "BasicExample")</Link>
+            <Link to='/react-scrollsy-examples/basic-example'>Basic example (no react-spring, "BasicExample")</Link>
           </li>
           <li>
-            <Link to='/track-document-scroll'>Track document scroll (<span className="color-blush">react-spring</span>, "DocumentScrollExample")</Link>
+            <Link to='/react-scrollsy-examples/track-document-scroll'>Track document scroll (<span className="color-blush">react-spring</span>, "DocumentScrollExample")</Link>
           </li>
           <li>
-            <Link to='/custom-element'>Track scrolling inside a custom element (overlay, no react-spring, "CustomElementExample")</Link>
+            <Link to='/react-scrollsy-examples/custom-element'>Track scrolling inside a custom element (overlay, no react-spring, "CustomElementExample")</Link>
           </li>
           <li>
-            <Link to='/element-offsets-svg'>
+            <Link to='/react-scrollsy-examples/element-offsets-svg'>
               Track element with offsets and SVG transformation (<span className="color-blush">react-spring</span> + <span className="color-blush">flubber</span>, "ElementWithOffsetsExample")
             </Link>
           </li>
           <li>
-            <Link to='/element-events-viewport'>
+            <Link to='/react-scrollsy-examples/element-events-viewport'>
               Track element with events, and viewport tracking (no react-spring, "ElementEventsViewportExample")
             </Link>
           </li>
           <li>
-            <Link to='/element-external-reference'>Track element outside of ScrollTracker (no react-spring, "ElementExternalReferenceExample")</Link>
+            <Link to='/react-scrollsy-examples/element-external-reference'>Track element outside of ScrollTracker (no react-spring, "ElementExternalReferenceExample")</Link>
           </li>
         </ul>
       </nav>

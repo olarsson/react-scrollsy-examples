@@ -9,7 +9,7 @@ function Overlay({ active = false }) {
   return (
     <div className={`overlay overlay-${!active ? "inactive" : "active"}`} id='custom-scroll-container'>
       <ScrollTrackerCustom
-        key={active.toString()} // forces a rerender of the tracker, use this if you hide the element with 'display: none'
+        key={active.toString()} // forces a rerender of the component, use this if you hide the element with 'display: none', otherwise heigh calculation of elements inside the container becomes convoluted
         resizeThrottle={150}
         scrollingElement='#custom-scroll-container'>
         {({ scrollData }: IScrollData) => {

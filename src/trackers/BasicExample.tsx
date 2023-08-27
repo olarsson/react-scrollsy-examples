@@ -24,6 +24,12 @@ function BasicExample() {
             {({ scrollObject }: IScrollObject) => {
               return (
                 <div className='elem-elem4-progress' ref={refPageProgress}>
+                  <div
+                    className='progress-bar'
+                    style={{
+                      width: `${scrollObject.progress * 100}%`,
+                    }}
+                  />
                   <strong>I do not use react-spring</strong>
                   <p>I track the scroll progress of this element.</p>
                   <h2>progress: {scrollObject.progress}</h2>

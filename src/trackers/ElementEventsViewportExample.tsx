@@ -36,6 +36,7 @@ function ElementEventsViewportExample() {
                   }}></div>
                 <strong>I do NOT use react-spring</strong>
                 <p>I track the scroll progress of this element in relation to the viewport.</p>
+                <p>Open the console to see the "onStart" and "onEnd" events being triggered.</p>
                 <h2>progress: {scrollObject.progress}</h2>
               </div>
             )}

@@ -18,9 +18,9 @@ export const SvgAnimation = memo(
     const [{ scroll }, setScroll] = useSpring(() => ({
       scroll: 0,
       config: {
-        mass: 9,
-        tension: 50,
-        friction: 9.5,
+        mass: 20,
+        tension: 150,
+        friction: 14,
         clamp: true,
       },
     }));
@@ -60,7 +60,7 @@ export const SvgAnimation = memo(
           }}></animated.div>
         <strong>I use react-spring and flubber</strong>
         <p>I track the scroll progress of this element in relation to the viewport and transform the paths of an SVG.</p>
-        <p>My offset to the top is 25% of the viewport height.</p>
+        <p>My offset to the top is 50% of the viewport height.</p>
         <p>My offset to the bottom is 200px.</p>
         <h2>progress: {progress}</h2>
 

@@ -23,7 +23,7 @@ function ElementWithOffsetsExample() {
                 basedOn: "elem",
               },
               offsetTop: {
-                distance: 25,
+                distance: 50,
                 unit: "%",
                 basedOn: "vp",
               },

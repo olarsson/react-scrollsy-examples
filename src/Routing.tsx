@@ -8,6 +8,7 @@ import ElementExternalReferenceExample from "./trackers/ElementExternalReference
 import BasicExample from "./trackers/BasicExample";
 import MultipleAndNestedTrackersExample from "./trackers/MultipleAndNestedTrackersExample";
 import AdvancedSpringsExample from "./trackers/AdvancedSpringsExample";
+import LogoExample from "./trackers/LogoExample";
 
 export default function Routing() {
   return (
@@ -31,6 +32,7 @@ export default function Routing() {
 function Layout() {
   return (
     <div>
+      <LogoExample />
       <nav>
         <ul>
           <li>
@@ -75,17 +77,6 @@ function Layout() {
         </ul>
       </nav>
       <Outlet />
-    </div>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to='/'>Go to the home page</Link>
-      </p>
     </div>
   );
 }

@@ -32,7 +32,8 @@ function ElementExternalReferenceExample() {
                     className='progress-bar'
                     style={{
                       width: `${scrollObject.progress * 100}%`,
-                    }}></div>
+                    }}
+                  />
                   <strong>I do NOT use react-spring</strong>
                   <p>I reflect the scroll progress of another element (the green one), not my own.</p>
                   <h2>progress: {scrollObject.progress}</h2>

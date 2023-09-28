@@ -8,10 +8,10 @@ export const LogoSpring = memo(
     const [{ scroll }, setScroll] = useSpring(() => ({
       scroll: 0,
       config: {
-        mass: 1,
-        tension: 50,
+        mass: 3,
+        tension: 100,
         friction: 14.5,
-        clamp: true,
+        clamp: false,
       },
     }));
 
@@ -28,7 +28,6 @@ export const LogoSpring = memo(
         .to({
           range: [0.0, 1.0],
           output: [0, 360],
-          extrapolate: "clamp",
         })
         .to((s) => `rotateX(${s}deg) rotateY(${s}deg)`)
     );
@@ -42,7 +41,7 @@ export const LogoSpring = memo(
               transform: cubeRotationSpring,
             }}>
             <div className='face front'>
-              <span>@react-scrollsy</span>
+              <span>react-scrollsy</span>
             </div>
             <div className='face back'></div>
             <div className='face right'></div>

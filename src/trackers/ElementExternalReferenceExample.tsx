@@ -35,7 +35,7 @@ function ElementExternalReferenceExample() {
                     }}
                   />
                   <strong>I do NOT use react-spring</strong>
-                  <p>I reflect the scroll progress of another element (the green one), not my own.</p>
+                  <p>I reflect the scroll progress of another element (the big one), not my own.</p>
                   <h2>progress: {scrollObject.progress}</h2>
                 </div>
               )}

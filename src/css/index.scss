@@ -148,6 +148,17 @@ svg.svg-animation {
   border: 1px solid $color-ultra-violet;
 }
 
+.elem-elem5-progress {
+  position: relative;
+  margin-top: 20vh;
+  margin-bottom: 40vh;
+  height: 110vh;
+  overflow: hidden;
+  background-color: $color-violet;
+  padding: 15px 35px;
+  border: 1px solid $color-ultra-violet;
+}
+
 .elem-side {
   position: fixed;
   bottom: 0;

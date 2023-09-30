@@ -9,12 +9,14 @@ import BasicExample from "./trackers/BasicExample";
 import MultipleAndNestedTrackersExample from "./trackers/MultipleAndNestedTrackersExample";
 import AdvancedSpringsExample from "./trackers/AdvancedSpringsExample";
 import LogoExample from "./trackers/LogoExample";
+import BasicTriggerExample from "./trackers/BasicTriggerExample";
 
 export default function Routing() {
   return (
     <div>
       <Routes>
         <Route path='/react-scrollsy-examples' element={<Layout />} />
+        <Route path='/react-scrollsy-examples/trigger' element={<BasicTriggerExample />} />
         <Route path='/react-scrollsy-examples/advanced-springs' element={<AdvancedSpringsExample />} />
         <Route path='/react-scrollsy-examples/multiple-and-nested-trackers' element={<MultipleAndNestedTrackersExample />} />
         <Route path='/react-scrollsy-examples/basic-example' element={<BasicExample />} />
@@ -23,7 +25,6 @@ export default function Routing() {
         <Route path='/react-scrollsy-examples/element-offsets-svg' element={<ElementWithOffsetsExample />} />
         <Route path='/react-scrollsy-examples/element-events-viewport' element={<ElementEventsViewportExample />} />
         <Route path='/react-scrollsy-examples/element-external-reference' element={<ElementExternalReferenceExample />} />
-        {/* <Route path='*' element={<NoMatch />} /> */}
       </Routes>
     </div>
   );
@@ -37,6 +38,9 @@ function Layout() {
         <ul>
           <li>
             <Link to='/react-scrollsy-examples/basic-example'>Basic example (no react-spring, "BasicExample")</Link>
+          </li>
+          <li>
+            <Link to='/react-scrollsy-examples/trigger'>Basic example with trigger (no react-spring, "BasicTriggerExample")</Link>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/advanced-springs'>

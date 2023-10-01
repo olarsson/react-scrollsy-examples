@@ -18,9 +18,9 @@ export const SvgAnimation = memo(
     const [{ scroll }, setScroll] = useSpring(() => ({
       scroll: 0,
       config: {
-        mass: 20,
+        mass: 10,
         tension: 150,
-        friction: 14,
+        friction: 27,
         clamp: true,
       },
     }));
@@ -64,14 +64,8 @@ export const SvgAnimation = memo(
         <p>My offset to the bottom is 200px.</p>
         <h2>progress: {progress}</h2>
 
-        <svg
-          className='svg-animation'
-          width='960'
-          height='500'
-          xmlns='http://www.w3.org/2000/svg'>
-          <g transform='translate(240 10) scale(20 20)'>
-            <animated.path d={pathSpring} fill='black' stroke='lightgray' />
-          </g>
+        <svg viewBox='0 5 25 15' className='svg-animation' width='15' height='20' xmlns='http://www.w3.org/2000/svg'>
+          <animated.path d={pathSpring} fill='black' stroke='lightgray' />
         </svg>
       </div>
     );

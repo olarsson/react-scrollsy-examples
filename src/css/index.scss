@@ -116,8 +116,9 @@ button {
 
 svg.svg-animation {
   max-width: 100%;
-  width: auto;
   height: auto;
+  display: block;
+  width: 300px;
 }
 
 .progress-bar {

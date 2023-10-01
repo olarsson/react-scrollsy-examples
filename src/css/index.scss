@@ -75,6 +75,16 @@ a {
   color: $color-saffron;
 }
 
+.presentation {
+  max-width: 70%;
+  padding: 0 20px;
+  margin: 50px auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  p {
+  }
+}
+
 ul {
   padding-left: 0;
   text-align: center;
@@ -229,10 +239,10 @@ svg.svg-animation {
 
   .shape {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     max-width: 500px;
     height: 300px;
     border-radius: 10px;
@@ -361,7 +371,7 @@ svg.svg-animation {
     height: 50px;
     perspective: 400px;
     margin-top: auto;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
 
     .cube {
       transform-style: preserve-3d;

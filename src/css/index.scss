@@ -272,6 +272,14 @@ svg.svg-animation {
   border: 1px solid $color-ultra-violet;
 }
 
+h2 {
+  display: block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .elem-side h2 {
   white-space: nowrap;
 }

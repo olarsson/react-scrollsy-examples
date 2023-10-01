@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { BackgroundColorSpring } from "../spring-components/advanced/BackgroundColorSpring";
 import { MultipleStagesSpring } from "../spring-components/advanced/MultipleStagesSpring";
 import { MultipleStagesSpringTwo } from "../spring-components/advanced/MultipleStagesSpringTwo";
+import { SourceCodeReference } from "../SourceCodeReference";
 
 function AdvancedSpringsExample() {
   const refElem1 = useRef(null);
@@ -14,7 +15,9 @@ function AdvancedSpringsExample() {
 
   return (
     <>
-      <ScrollTrackerDocument resizeThrottle={150}>
+      <SourceCodeReference name='AdvancedSpringsExample' filePath='trackers/AdvancedSpringsExample.tsx' />
+
+      <ScrollTrackerDocument>
         {({ scrollData }: IScrollData) => {
           return (
             <>

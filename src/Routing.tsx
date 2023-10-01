@@ -37,46 +37,51 @@ function Layout() {
       <nav>
         <ul>
           <li>
-            <Link to='/react-scrollsy-examples/basic-example'>Basic example (no react-spring, "BasicExample")</Link>
+            <Link to='/react-scrollsy-examples/basic-example'>Basic example</Link>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/trigger'>Basic example with trigger (no react-spring, "BasicTriggerExample")</Link>
+            <Link to='/react-scrollsy-examples/trigger'>Basic example with trigger</Link>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/advanced-springs'>
-              Advanced springs (<span className='color-blush'>react-spring</span> mulitple animations with interpolations, "AdvancedSpringsExample")
+              Advanced springs (mulitple animations with interpolations)
             </Link>
+            <span>
+              Dependencies: <span className='color-blush'>react-spring</span>
+            </span>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/multiple-and-nested-trackers'>
-              Mulitple and nested trackers (both with and without <span className='color-blush'>react-spring</span>, "MultipleAndNestedTrackers")
+              Mulitple and nested trackers
             </Link>
+            <span>
+              Dependencies: <span className='color-blush'>react-spring</span> / none
+            </span>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/track-document-scroll'>
-              Track document scroll (<span className='color-blush'>react-spring</span>, "DocumentScrollExample")
+              Track document scroll
             </Link>
+            <span>
+              Dependencies: <span className='color-blush'>react-spring</span>
+            </span>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/custom-element'>
-              Track scrolling inside a custom element (overlay, no react-spring, "CustomElementExample")
-            </Link>
+            <Link to='/react-scrollsy-examples/custom-element'>Track scrolling inside a custom element (overlay)</Link>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/element-offsets-svg'>
-              Track element with offsets and SVG transformation (<span className='color-blush'>react-spring</span> +{" "}
-              <span className='color-blush'>flubber</span>, "ElementWithOffsetsExample")
+              Track element with offsets and SVG transformation
             </Link>
+            <span>
+              Dependencies: <span className='color-blush'>react-spring</span>, <span className='color-blush'>flubber</span>
+            </span>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/element-events-viewport'>
-              Track element with events, and viewport tracking (no react-spring, "ElementEventsViewportExample")
-            </Link>
+            <Link to='/react-scrollsy-examples/element-events-viewport'>Track element with events, and viewport tracking</Link>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/element-external-reference'>
-              Track element outside of ScrollTracker (no react-spring, "ElementExternalReferenceExample")
-            </Link>
+            <Link to='/react-scrollsy-examples/element-external-reference'>Track element outside of ScrollTracker</Link>
           </li>
         </ul>
       </nav>

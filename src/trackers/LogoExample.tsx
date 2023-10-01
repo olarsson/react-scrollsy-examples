@@ -4,31 +4,36 @@ import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { LogoSpring } from "../spring-components/LogoSpring";
+import { SourceCodeReference } from "../SourceCodeReference";
 
 function LogoExample() {
-  const refPageProgress = useRef(null);
+  const refElem = useRef(null);
 
   return (
-    <ScrollTrackerDocument resizeThrottle={150}>
-      {({ scrollData }: IScrollData) => {
-        return (
-          <ScrollTracker
-            scrollData={scrollData}
-            elem={refPageProgress}
-            settings={{
-              duration: {
-                distance: 100,
-                unit: "%",
-                basedOn: "doc",
-              },
-            }}>
-            {({ scrollObject }: IScrollObject) => {
-              return <LogoSpring progress={scrollObject.progress} ref={refPageProgress} />;
-            }}
-          </ScrollTracker>
-        );
-      }}
-    </ScrollTrackerDocument>
+    <>
+      <SourceCodeReference name='LogoExample' filePath='trackers/LogoExample.tsx' />
+
+      <ScrollTrackerDocument>
+        {({ scrollData }: IScrollData) => {
+          return (
+            <ScrollTracker
+              scrollData={scrollData}
+              elem={refElem}
+              settings={{
+                duration: {
+                  distance: 100,
+                  unit: "%",
+                  basedOn: "doc",
+                },
+              }}>
+              {({ scrollObject }: IScrollObject) => {
+                return <LogoSpring progress={scrollObject.progress} ref={refElem} />;
+              }}
+            </ScrollTracker>
+          );
+        }}
+      </ScrollTrackerDocument>
+    </>
   );
 }
 

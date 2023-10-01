@@ -3,43 +3,47 @@ import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
+import { SourceCodeReference } from "../SourceCodeReference";
 
 function BasicExample() {
-  const refPageProgress = useRef(null);
+  const refElem = useRef(null);
 
   return (
-    <ScrollTrackerDocument resizeThrottle={150}>
-      {({ scrollData }: IScrollData) => {
-        return (
-          <ScrollTracker
-            scrollData={scrollData}
-            elem={refPageProgress}
-            settings={{
-              duration: {
-                distance: 100,
-                unit: "%",
-                basedOn: "elem",
-              },
-            }}>
-            {({ scrollObject }: IScrollObject) => {
-              return (
-                <div className='elem-elem4-progress' ref={refPageProgress}>
-                  <div
-                    className='progress-bar'
-                    style={{
-                      width: `${scrollObject.progress * 100}%`,
-                    }}
-                  />
-                  <strong>I do not use react-spring</strong>
-                  <p>I track the scroll progress of this element.</p>
-                  <h2>progress: {scrollObject.progress}</h2>
-                </div>
-              );
-            }}
-          </ScrollTracker>
-        );
-      }}
-    </ScrollTrackerDocument>
+    <>
+      <SourceCodeReference name='BasicExample' filePath='trackers/BasicExample.tsx' />
+
+      <ScrollTrackerDocument>
+        {({ scrollData }: IScrollData) => {
+          return (
+            <ScrollTracker
+              scrollData={scrollData}
+              elem={refElem}
+              settings={{
+                duration: {
+                  distance: 100,
+                  unit: "%",
+                  basedOn: "elem",
+                },
+              }}>
+              {({ scrollObject }: IScrollObject) => {
+                return (
+                  <div className='elem-elem4-progress' ref={refElem}>
+                    <div
+                      className='progress-bar'
+                      style={{
+                        width: `${scrollObject.progress * 100}%`,
+                      }}
+                    />
+                    <p>I track the scroll progress of this element.</p>
+                    <h2>progress: {scrollObject.progress}</h2>
+                  </div>
+                );
+              }}
+            </ScrollTracker>
+          );
+        }}
+      </ScrollTrackerDocument>
+    </>
   );
 }
 

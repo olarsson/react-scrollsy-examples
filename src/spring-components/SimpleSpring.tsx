@@ -41,7 +41,7 @@ export const SimpleSpring = memo(
             width: widthSpring,
           }}
         />
-        <strong>I do use react-spring</strong>
+        <strong>I use react-spring</strong>
         <p>I track the scroll progress of the element.</p>
         <h2>progress: {progress}</h2>
       </div>

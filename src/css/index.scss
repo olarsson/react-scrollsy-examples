@@ -8,6 +8,10 @@ $color-saffron: #f8c630;
   color: $color-blush;
 }
 
+.text-center {
+  text-align: center;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -31,7 +35,7 @@ body {
   &:before {
     content: "scroll around!";
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -58,16 +62,36 @@ body {
   margin-bottom: auto;
 }
 
+.fixed-src-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 0 20px;
+  background-color: rgba($color-ultra-violet, 0.8);
+}
+
 a {
   color: $color-saffron;
 }
 
 ul {
+  padding-left: 0;
   text-align: center;
+  list-style: none;
+
   li {
     line-height: 1.2;
-    list-style: none;
     margin: 15px 0;
+
+    > span {
+      display: block;
+      margin-top: 5px;
+    }
+
+    span {
+      font-size: 0.8rem;
+    }
   }
 }
 

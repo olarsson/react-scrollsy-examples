@@ -4,6 +4,7 @@ import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SimpleSpring } from "../spring-components/SimpleSpring";
+import { SourceCodeReference } from "../SourceCodeReference";
 
 function MultipleAndNestedTrackersExample() {
   const refElem1 = useRef(null);
@@ -11,7 +12,9 @@ function MultipleAndNestedTrackersExample() {
 
   return (
     <>
-      <ScrollTrackerDocument resizeThrottle={150}>
+      <SourceCodeReference name='MultipleAndNestedTrackersExample' filePath='trackers/MultipleAndNestedTrackersExample.tsx' />
+
+      <ScrollTrackerDocument>
         {({ scrollData }: IScrollData) => {
           return (
             <ScrollTracker

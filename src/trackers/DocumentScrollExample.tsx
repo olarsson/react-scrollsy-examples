@@ -5,31 +5,36 @@ import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
 import { BasicProgress } from "../spring-components/BasicProgress";
 
 import { useRef } from "react";
+import { SourceCodeReference } from "../SourceCodeReference";
 
 function DocumentScrollExample() {
-  const refPageProgress = useRef(null);
+  const refElem = useRef(null);
 
   return (
-    <ScrollTrackerDocument resizeThrottle={150}>
-      {({ scrollData }: IScrollData) => {
-        return (
-          <ScrollTracker
-            scrollData={scrollData}
-            elem={refPageProgress}
-            settings={{
-              duration: {
-                distance: 100,
-                unit: "%",
-                basedOn: "doc",
-              },
-            }}>
-            {({ scrollObject }: IScrollObject) => {
-              return <BasicProgress progress={scrollObject.progress} ref={refPageProgress} />;
-            }}
-          </ScrollTracker>
-        );
-      }}
-    </ScrollTrackerDocument>
+    <>
+      <SourceCodeReference name='DocumentScrollExample' filePath='trackers/DocumentScrollExample.tsx' />
+
+      <ScrollTrackerDocument>
+        {({ scrollData }: IScrollData) => {
+          return (
+            <ScrollTracker
+              scrollData={scrollData}
+              elem={refElem}
+              settings={{
+                duration: {
+                  distance: 100,
+                  unit: "%",
+                  basedOn: "doc",
+                },
+              }}>
+              {({ scrollObject }: IScrollObject) => {
+                return <BasicProgress progress={scrollObject.progress} ref={refElem} />;
+              }}
+            </ScrollTracker>
+          );
+        }}
+      </ScrollTrackerDocument>
+    </>
   );
 }
 

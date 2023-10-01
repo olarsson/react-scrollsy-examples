@@ -3,22 +3,25 @@ import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
+import { SourceCodeReference } from "../SourceCodeReference";
 
 function ElementExternalReferenceExample() {
-  const refSideElementConnection = useRef(null);
+  const refElem = useRef(null);
 
   return (
     <>
-      <div className='elem-elem3-progress' ref={refSideElementConnection}>
+      <SourceCodeReference name='ElementExternalReferenceExample' filePath='trackers/ElementExternalReferenceExample.tsx' />
+
+      <div className='elem-elem3-progress' ref={refElem}>
         <p>Something else tracks my scroll progress (the fixed element to the right).</p>
       </div>
 
-      <ScrollTrackerDocument resizeThrottle={150}>
+      <ScrollTrackerDocument>
         {({ scrollData }: IScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
-              elem={refSideElementConnection}
+              elem={refElem}
               settings={{
                 duration: {
                   distance: 100,
@@ -34,7 +37,6 @@ function ElementExternalReferenceExample() {
                       width: `${scrollObject.progress * 100}%`,
                     }}
                   />
-                  <strong>I do NOT use react-spring</strong>
                   <p>I reflect the scroll progress of another element (the big one), not my own.</p>
                   <h2>progress: {scrollObject.progress}</h2>
                 </div>

@@ -45,9 +45,9 @@ export const BackgroundColorSpring = memo(
     );
 
     return (
-      <div className='elem-showcase-background-color' ref={ref}>
+      <div className='elem elem--showcase-background-color' ref={ref}>
         <animated.div
-          className='progress-bar'
+          className='elem__progress-bar'
           style={{
             width: widthSpring,
             backgroundColor: bgColorSpring,

@@ -29,9 +29,9 @@ function MultipleAndNestedTrackersExample() {
               }}>
               {({ scrollObject }: IScrollObject) => {
                 return (
-                  <div className='elem-mulitple-trackers-1' ref={refElem1}>
+                  <div className='elem elem--mulitple-nested' ref={refElem1}>
                     <div
-                      className='progress-bar'
+                      className='elem__progress-bar'
                       style={{
                         width: `${scrollObject.progress * 100}%`,
                       }}

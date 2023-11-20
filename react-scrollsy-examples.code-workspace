@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "react-scrollsy-examples",
+			"path": "."
+		},
+		{
+			"name": "react-scrollsy",
+			"path": "../react-scrollsy"
+		},
+		{
+			"path": "../nextjs-scrollsy"
+		},
+		{
+			"path": "../cra"
+		}
+	],
+  "settings": {}
+}

@@ -1,0 +1,190 @@
+.elem {
+  &--fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &--fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  &--page-progress {
+    background-color: $color-violet;
+    padding: 15px 35px;
+    border: 1px solid $color-ultra-violet;
+
+    &__content {
+      max-width: 70%;
+    }
+  }
+
+  &--events {
+    position: relative;
+    margin-top: 110vh;
+    margin-bottom: 100vh;
+    min-height: 50vh;
+    @include bgAndBorder($color-ultra-violet, $color-blush);
+  }
+
+  &--svg {
+    position: relative;
+    margin-top: 100vh;
+    margin-bottom: 400px;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--external-reference {
+    position: relative;
+    margin-top: 110vh;
+    margin-bottom: 20vh;
+    min-height: 50vh;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--side {
+    max-width: 300px;
+    width: 100%;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+
+    h2 {
+      white-space: nowrap;
+    }
+  }
+
+  &--basic {
+    position: relative;
+    margin-top: 110vh;
+    height: 70vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--basic-trigger {
+    position: relative;
+    margin-top: 20vh;
+    margin-bottom: 40vh;
+    height: 110vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--mulitple-nested {
+    position: relative;
+    margin-top: 70vh;
+    margin-bottom: 100vh;
+    min-height: 70vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--mulitple-nested-b {
+    position: relative;
+    margin-top: 10vh;
+    min-height: 40vh;
+    height: 100%;
+    overflow: hidden;
+    @include bgAndBorder($color-ultra-violet, $color-violet);
+  }
+
+  &--showcase-multiple-stages {
+    position: relative;
+    margin-bottom: 30vh;
+    min-height: 80vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--showcase-multiple-stages-b {
+    position: relative;
+    margin-top: 110vh;
+    margin-bottom: 30vh;
+    min-height: 120vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--showcase-background-color {
+    position: relative;
+    margin-bottom: 200px;
+    min-height: 50vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &__progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &--cube-container {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    margin: 30px auto 0;
+
+    &__cube {
+      transform-style: preserve-3d;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      &--face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: repeating-linear-gradient(0deg, rgba(70, 70, 70, 0.2) 0px, rgba(70, 70, 70, 0.2) 1px, transparent 1px, transparent 21px),
+          repeating-linear-gradient(90deg, rgba(70, 70, 70, 0.2) 0px, rgba(70, 70, 70, 0.2) 1px, transparent 1px, transparent 21px),
+          linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+
+        &__top {
+          transform: rotateX(90deg) translateZ(50px);
+        }
+
+        &__bottom {
+          transform: rotateX(-90deg) translateZ(50px);
+        }
+
+        &__right {
+          transform: rotateY(90deg) translateZ(50px);
+        }
+
+        &__left {
+          transform: rotateY(-90deg) translateZ(50px);
+        }
+
+        &__front {
+          transform: rotateX(0deg) translateZ(50px);
+        }
+
+        &__back {
+          transform: rotateX(-180deg) translateZ(50px);
+        }
+      }
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    max-width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: $color-blush;
+    transform-origin: 0 0;
+  }
+}

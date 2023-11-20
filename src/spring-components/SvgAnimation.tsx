@@ -52,9 +52,9 @@ export const SvgAnimation = memo(
     );
 
     return (
-      <div className='elem-elem2-progress' ref={ref}>
+      <div className='elem elem--svg' ref={ref}>
         <animated.div
-          className='progress-bar'
+          className='elem__progress-bar'
           style={{
             width: widthSpring,
           }}></animated.div>

@@ -45,19 +45,19 @@ function Layout() {
           <li>
             <Link to='/react-scrollsy-examples/advanced-springs'>Advanced springs (mulitple animations with interpolations)</Link>
             <span>
-              Dependencies: <span className='color-blush'>react-spring</span>
+              Also uses: <span className='color-blush'>react-spring</span>
             </span>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/multiple-and-nested-trackers'>Mulitple and nested trackers</Link>
             <span>
-              Dependencies: <span className='color-blush'>react-spring</span> / none
+              Also uses: <span className='color-blush'>react-spring</span> / none
             </span>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/track-document-scroll'>Track document scroll</Link>
             <span>
-              Dependencies: <span className='color-blush'>react-spring</span>
+              Also uses: <span className='color-blush'>react-spring</span>
             </span>
           </li>
           <li>
@@ -66,7 +66,7 @@ function Layout() {
           <li>
             <Link to='/react-scrollsy-examples/element-offsets-svg'>Track element with offsets and SVG transformation</Link>
             <span>
-              Dependencies: <span className='color-blush'>react-spring</span>, <span className='color-blush'>flubber</span>
+              Also uses: <span className='color-blush'>react-spring</span>, <span className='color-blush'>flubber</span>
             </span>
           </li>
           <li>
@@ -79,9 +79,12 @@ function Layout() {
       </nav>
       <div className='presentation'>
         <p>
-          Some of these examples use <a href="https://www.react-spring.dev/" target="_blank" rel="noopener noreferrer">react-spring</a> which is a spring based animation library. It's not needed to use it in order for react-scrollsy to
-          work, but its used as an example of how such a library could be used with react-scrollsy to create smooth, performant and higly customizable
-          animations.
+          Some of these examples use
+          <a href='https://www.react-spring.dev/' target='_blank' rel='noopener noreferrer'>
+            react-spring
+          </a>
+          which is a spring based animation library. It's not needed to use it in order for react-scrollsy to work, but its used as an example of how
+          such a library could be used with react-scrollsy to create smooth, performant and higly customizable animations.
         </p>
         <p>
           The 3d-logo below demonstrates how react-scrollsy works in conjuction with react-spring. react-scrollsy keeps track of the scroll progress

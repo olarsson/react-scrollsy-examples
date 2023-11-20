@@ -1,0 +1,23 @@
+.overlay {
+  position: fixed;
+  display: block;
+  top: 20%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  z-index: 1;
+  @include bgAndBorder($color-violet, $color-ultra-violet);
+  overflow-y: scroll;
+
+  &--progress {
+    position: relative;
+    margin-top: 40vh;
+    margin-bottom: 30vh;
+    min-height: 80vh;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--inactive {
+    display: none;
+  }
+}

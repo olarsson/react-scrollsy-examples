@@ -32,9 +32,9 @@ function ElementEventsViewportExample() {
                 console.log("scroll progress ends for this element (offset affects this)");
               }}>
               {({ scrollObject }: IScrollObject) => (
-                <div className='elem-elem1-progress' ref={refElem}>
+                <div className='elem elem--events' ref={refElem}>
                   <div
-                    className='progress-bar'
+                    className='elem__progress-bar'
                     style={{
                       width: `${scrollObject.progress * 100}%`,
                     }}></div>

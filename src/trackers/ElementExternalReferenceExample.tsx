@@ -12,7 +12,7 @@ function ElementExternalReferenceExample() {
     <>
       <SourceCodeReference name='ElementExternalReferenceExample' filePath='trackers/ElementExternalReferenceExample.tsx' />
 
-      <div className='elem-elem3-progress' ref={refElem}>
+      <div className='elem elem--external-reference' ref={refElem}>
         <p>Something else tracks my scroll progress (the fixed element to the right).</p>
       </div>
 
@@ -30,9 +30,9 @@ function ElementExternalReferenceExample() {
                 },
               }}>
               {({ scrollObject }: IScrollObject) => (
-                <div className='elem-side'>
+                <div className='elem elem--side elem--fixed-bottom-right'>
                   <div
-                    className='progress-bar'
+                    className='elem__progress-bar'
                     style={{
                       width: `${scrollObject.progress * 100}%`,
                     }}

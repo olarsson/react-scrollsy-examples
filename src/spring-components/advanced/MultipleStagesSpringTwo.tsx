@@ -97,15 +97,15 @@ export const MultipleStagesSpringTwo = memo(
     const transforms = to([transformSpringScale, transformSpringRotate], (a, b) => [`scale(${a}) rotate(${b}deg) translate3d(-50%, -50%, 0)`]);
 
     return (
-      <div className='elem-showcase-multiple-stages-two' ref={ref}>
+      <div className='elem elem--showcase-multiple-stages-b' ref={ref}>
         <animated.div
-          className='progress-bar'
+          className='elem__progress-bar'
           style={{
             width: widthSpring,
           }}
         />
         <animated.div
-          className='shape'
+          className='elem__shape'
           style={{
             transform: transforms,
             borderRadius: borderRadiusSpring

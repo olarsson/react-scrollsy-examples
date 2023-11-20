@@ -1,0 +1,12 @@
+button {
+  background-color: $color-blush;
+  padding: 10px 15px;
+  margin-left: 30px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  &.btn-toggle-overlay {
+    margin-top: 200px;
+  }
+}

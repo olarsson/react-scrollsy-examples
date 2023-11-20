@@ -1,0 +1,5 @@
+@mixin bgAndBorder($bg, $border) {
+  background-color: $bg;
+  padding: 15px 35px;
+  border: 1px solid $border;
+}

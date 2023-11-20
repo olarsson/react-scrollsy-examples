@@ -34,9 +34,9 @@ export const SimpleSpring = memo(
     );
 
     return (
-      <div className='elem-mulitple-trackers-2' ref={ref}>
+      <div className='elem elem--mulitple-nested-b' ref={ref}>
         <animated.div
-          className='progress-bar'
+          className='elem__progress-bar'
           style={{
             width: widthSpring,
           }}

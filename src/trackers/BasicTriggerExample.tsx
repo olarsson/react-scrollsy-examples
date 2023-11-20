@@ -30,9 +30,9 @@ function BasicTriggerExample() {
                 }}>
                 {({ scrollObject }: IScrollObject) => {
                   return (
-                    <div className='elem-elem5-progress' ref={refElem1}>
+                    <div className='elem elem--basic-trigger' ref={refElem1}>
                       <div
-                        className='progress-bar'
+                        className='elem__progress-bar'
                         style={{
                           width: `${scrollObject.progress * 100}%`,
                         }}
@@ -60,9 +60,9 @@ function BasicTriggerExample() {
                 }}>
                 {({ scrollObject }: IScrollObject) => {
                   return (
-                    <div className='elem-elem5-progress' ref={refElem2}>
+                    <div className='elem elem--basic-trigger' ref={refElem2}>
                       <div
-                        className='progress-bar'
+                        className='elem__progress-bar'
                         style={{
                           width: `${scrollObject.progress * 100}%`,
                         }}

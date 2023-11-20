@@ -34,20 +34,20 @@ export const LogoSpring = memo(
 
     return (
       <div className='react-scrollsy-3d' ref={ref}>
-        <div className='cube-container'>
+        <div className='react-scrollsy-3d__container'>
           <animated.div
-            className='cube'
+            className='react-scrollsy-3d__container--cube'
             style={{
               transform: cubeRotationSpring,
             }}>
-            <div className='face front'>
+            <div className='react-scrollsy-3d__container--face react-scrollsy-3d__container--face__front'>
               <span>react-scrollsy</span>
             </div>
-            <div className='face back'></div>
-            <div className='face right'></div>
-            <div className='face left'></div>
-            <div className='face top'></div>
-            <div className='face bottom'></div>
+            <div className='react-scrollsy-3d__container--face react-scrollsy-3d__container--face__back'></div>
+            <div className='react-scrollsy-3d__container--face react-scrollsy-3d__container--face__right'></div>
+            <div className='react-scrollsy-3d__container--face react-scrollsy-3d__container--face__left'></div>
+            <div className='react-scrollsy-3d__container--face react-scrollsy-3d__container--face__top'></div>
+            <div className='react-scrollsy-3d__container--face react-scrollsy-3d__container--face__bottom'></div>
           </animated.div>
         </div>
       </div>

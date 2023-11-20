@@ -27,9 +27,9 @@ function BasicExample() {
               }}>
               {({ scrollObject }: IScrollObject) => {
                 return (
-                  <div className='elem-elem4-progress' ref={refElem}>
+                  <div className='elem elem--basic' ref={refElem}>
                     <div
-                      className='progress-bar'
+                      className='elem__progress-bar'
                       style={{
                         width: `${scrollObject.progress * 100}%`,
                       }}

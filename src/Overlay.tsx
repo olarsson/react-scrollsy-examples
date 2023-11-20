@@ -7,7 +7,7 @@ function Overlay({ active = false }) {
   const refElem = useRef(null);
 
   return (
-    <div className={`overlay overlay-${!active ? "inactive" : "active"}`} id='custom-scroll-container'>
+    <div className={`overlay overlay--${!active ? "inactive" : "active"}`} id='custom-scroll-container'>
       <ScrollTrackerCustom
         key={active.toString()} // forces a rerender of the component, use this if you hide the element with 'display: none', otherwise height calculation of elements inside the container becomes convoluted
         scrollingElement='#custom-scroll-container'>
@@ -26,9 +26,9 @@ function Overlay({ active = false }) {
                   },
                 }}>
                 {({ scrollObject }: IScrollObject) => (
-                  <div className='overlay-elem1-progress' ref={refElem}>
+                  <div className='elem overlay--progress' ref={refElem}>
                     <div
-                      className='progress-bar'
+                      className='elem__progress-bar'
                       style={{
                         width: `${scrollObject.progress * 100}%`,
                       }}></div>

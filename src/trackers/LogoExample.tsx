@@ -13,7 +13,9 @@ function LogoExample() {
     <>
       <SourceCodeReference name='LogoExample' filePath='trackers/LogoExample.tsx' />
 
-      <ScrollTrackerDocument>
+      <ScrollTrackerDocument
+        scrollThrottle={33} // 1000 ms/30 fps = 33ms, limits the triggered events to 30 fps, optional
+      >
         {({ scrollData }: IScrollData) => {
           return (
             <ScrollTracker

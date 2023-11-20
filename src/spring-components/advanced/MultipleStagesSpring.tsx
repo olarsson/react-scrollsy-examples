@@ -61,9 +61,9 @@ export const MultipleStagesSpring = memo(
     );
 
     return (
-      <div className='elem-showcase-multiple-stages' ref={ref}>
+      <div className='elem elem--showcase-multiple-stages' ref={ref}>
         <animated.div
-          className='progress-bar'
+          className='elem__progress-bar'
           style={{
             width: widthSpring,
             backgroundColor: bgColorSpring,

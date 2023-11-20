@@ -44,31 +44,31 @@ export const BasicProgress = memo(
     );
 
     return (
-      <div className='elem-page-progress' ref={ref}>
+      <div className='elem elem--page-progress elem--fixed-top' ref={ref}>
         <animated.div
-          className='progress-bar'
+          className='elem__progress-bar'
           style={{
             width: widthSpring,
           }}
         />
-        <div className='content'>
+        <div className='elem--page-progress__content'>
           <strong>I use react-spring</strong>
           <p>I track the scroll progress of this document, and rotate this cube from 0 to 360 degress while doing so.</p>
           <h2>progress: {progress}</h2>
         </div>
 
-        <div className='cube-container'>
+        <div className='elem--cube-container'>
           <animated.div
-            className='cube'
+            className='elem--cube-container__cube'
             style={{
               transform: cubeRotationSpring,
             }}>
-            <div className='face front'></div>
-            <div className='face back'></div>
-            <div className='face right'></div>
-            <div className='face left'></div>
-            <div className='face top'></div>
-            <div className='face bottom'></div>
+            <div className='elem--cube-container__cube--face elem--cube-container__cube--face__front'></div>
+            <div className='elem--cube-container__cube--face elem--cube-container__cube--face__back'></div>
+            <div className='elem--cube-container__cube--face elem--cube-container__cube--face__right'></div>
+            <div className='elem--cube-container__cube--face elem--cube-container__cube--face__left'></div>
+            <div className='elem--cube-container__cube--face elem--cube-container__cube--face__top'></div>
+            <div className='elem--cube-container__cube--face elem--cube-container__cube--face__bottom'></div>
           </animated.div>
         </div>
       </div>

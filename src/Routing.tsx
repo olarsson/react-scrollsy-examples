@@ -79,10 +79,10 @@ function Layout() {
       </nav>
       <div className='presentation'>
         <p>
-          Some of these examples use
+          Some of these examples use{" "}
           <a href='https://www.react-spring.dev/' target='_blank' rel='noopener noreferrer'>
             react-spring
-          </a>
+          </a>{" "}
           which is a spring based animation library. It's not needed to use it in order for react-scrollsy to work, but its used as an example of how
           such a library could be used with react-scrollsy to create smooth, performant and higly customizable animations.
         </p>

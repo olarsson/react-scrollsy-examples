@@ -17,6 +17,7 @@
 html,
 body {
   background-color: $color-dark-purple;
+  overflow-x: hidden;
 
   &:before {
     content: "scroll around!";

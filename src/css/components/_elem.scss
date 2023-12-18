@@ -73,6 +73,39 @@
     @include bgAndBorder($color-violet, $color-ultra-violet);
   }
 
+  &--parallax-1,
+  &--parallax-2,
+  &--parallax-3 {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+  }
+
+  &--parallax-1 {
+    margin-top: 90vh;
+    margin-bottom: 10vh;
+  }
+
+  &--parallax-2 {
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+  }
+
+  &--parallax-3 {
+    margin-top: 10vh;
+    margin-bottom: 110vh;
+  }
+
+  // &--parallax {
+  //   position: relative;
+  //   margin-top: 20vh;
+  //   margin-bottom: 40vh;
+  //   height: 30vh;
+  //   overflow: hidden;
+  //   @include bgAndBorder($color-violet, $color-ultra-violet);
+  // }
+
   &--mulitple-nested {
     position: relative;
     margin-top: 70vh;

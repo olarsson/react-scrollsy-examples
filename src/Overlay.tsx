@@ -1,16 +1,17 @@
 import { ScrollTrackerCustom, ScrollTracker } from "react-scrollsy";
-
 import { useRef } from "react";
 import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
 
 function Overlay({ active = false }) {
   const refElem = useRef(null);
+  const refCustomScrollContainer = useRef(null);
 
   return (
-    <div className={`overlay overlay--${!active ? "inactive" : "active"}`} id='custom-scroll-container'>
+    <div ref={refCustomScrollContainer} className={`overlay overlay--${!active ? "inactive" : "active"}`} id='custom-scroll-container'>
       <ScrollTrackerCustom
         key={active.toString()} // forces a rerender of the component, use this if you hide the element with 'display: none', otherwise height calculation of elements inside the container becomes convoluted
         scrollingElement='#custom-scroll-container'>
+        {/* // scrollingElement={refCustomScrollContainer}> */}
         {({ scrollData }: IScrollData) => {
           return (
             <div className='App'>

@@ -10,6 +10,7 @@ import MultipleAndNestedTrackersExample from "./trackers/MultipleAndNestedTracke
 import AdvancedSpringsExample from "./trackers/AdvancedSpringsExample";
 import LogoExample from "./trackers/LogoExample";
 import BasicTriggerExample from "./trackers/BasicTriggerExample";
+import ParallaxExample from "./trackers/ParallaxExample";
 
 export default function Routing() {
   return (
@@ -17,6 +18,7 @@ export default function Routing() {
       <Routes>
         <Route path='/react-scrollsy-examples' element={<Layout />} />
         <Route path='/react-scrollsy-examples/trigger' element={<BasicTriggerExample />} />
+        <Route path='/react-scrollsy-examples/parallax' element={<ParallaxExample />} />
         <Route path='/react-scrollsy-examples/advanced-springs' element={<AdvancedSpringsExample />} />
         <Route path='/react-scrollsy-examples/multiple-and-nested-trackers' element={<MultipleAndNestedTrackersExample />} />
         <Route path='/react-scrollsy-examples/basic-example' element={<BasicExample />} />
@@ -41,6 +43,9 @@ function Layout() {
           </li>
           <li>
             <Link to='/react-scrollsy-examples/trigger'>Basic example with trigger</Link>
+          </li>
+          <li>
+            <Link to='/react-scrollsy-examples/parallax'>Parallax example</Link>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/advanced-springs'>Advanced springs (mulitple animations with interpolations)</Link>

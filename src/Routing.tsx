@@ -11,6 +11,7 @@ import AdvancedSpringsExample from "./trackers/AdvancedSpringsExample";
 import LogoExample from "./trackers/LogoExample";
 import BasicTriggerExample from "./trackers/BasicTriggerExample";
 import ParallaxExample from "./trackers/ParallaxExample";
+import HorizontalSliderExample from "./trackers/HorizontalSliderExample";
 
 export default function Routing() {
   return (
@@ -19,6 +20,7 @@ export default function Routing() {
         <Route path='/react-scrollsy-examples' element={<Layout />} />
         <Route path='/react-scrollsy-examples/trigger' element={<BasicTriggerExample />} />
         <Route path='/react-scrollsy-examples/parallax' element={<ParallaxExample />} />
+        <Route path='/react-scrollsy-examples/horizontal-slider' element={<HorizontalSliderExample />} />
         <Route path='/react-scrollsy-examples/advanced-springs' element={<AdvancedSpringsExample />} />
         <Route path='/react-scrollsy-examples/multiple-and-nested-trackers' element={<MultipleAndNestedTrackersExample />} />
         <Route path='/react-scrollsy-examples/basic-example' element={<BasicExample />} />
@@ -39,13 +41,16 @@ function Layout() {
       <nav>
         <ul>
           <li>
-            <Link to='/react-scrollsy-examples/basic-example'>Basic example</Link>
+            <Link to='/react-scrollsy-examples/basic-example'>Basic</Link>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/trigger'>Basic example with trigger</Link>
+            <Link to='/react-scrollsy-examples/trigger'>Basic with trigger</Link>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/parallax'>Parallax example</Link>
+            <Link to='/react-scrollsy-examples/parallax'>Parallax</Link>
+          </li>
+          <li>
+            <Link to='/react-scrollsy-examples/horizontal-slider'>Horizontal slider</Link>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/advanced-springs'>Advanced springs (mulitple animations with interpolations)</Link>
@@ -60,25 +65,25 @@ function Layout() {
             </span>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/track-document-scroll'>Track document scroll</Link>
+            <Link to='/react-scrollsy-examples/track-document-scroll'>Document scroll</Link>
             <span>
               Also uses: <span className='color-blush'>react-spring</span>
             </span>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/custom-element'>Track scrolling inside a custom element (overlay)</Link>
+            <Link to='/react-scrollsy-examples/custom-element'>Scrolling inside a custom element (overlay)</Link>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/element-offsets-svg'>Track element with offsets and SVG transformation</Link>
+            <Link to='/react-scrollsy-examples/element-offsets-svg'>Element with offsets and SVG transformation</Link>
             <span>
               Also uses: <span className='color-blush'>react-spring</span>, <span className='color-blush'>flubber</span>
             </span>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/element-events-viewport'>Track element with events, and viewport tracking</Link>
+            <Link to='/react-scrollsy-examples/element-events-viewport'>Element with events, and viewport tracking</Link>
           </li>
           <li>
-            <Link to='/react-scrollsy-examples/element-external-reference'>Track element outside of ScrollTracker</Link>
+            <Link to='/react-scrollsy-examples/element-external-reference'>Element outside of ScrollTracker</Link>
           </li>
         </ul>
       </nav>

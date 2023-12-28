@@ -97,14 +97,34 @@
     margin-bottom: 110vh;
   }
 
-  // &--parallax {
-  //   position: relative;
-  //   margin-top: 20vh;
-  //   margin-bottom: 40vh;
-  //   height: 30vh;
-  //   overflow: hidden;
-  //   @include bgAndBorder($color-violet, $color-ultra-violet);
-  // }
+  &--horizontal-slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 110vh;
+    margin-bottom: 100vh;
+    overflow: hidden;
+    @include bgAndBorder($color-violet, $color-ultra-violet);
+    padding-bottom: 10vh;
+    padding-left: 0;
+    padding-right: 0;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      height: 100%;
+
+      &--fake-img {
+        display: inline-block;
+        max-width: 25%;
+        width: 100%;
+        height: 25vh;
+      }
+    }
+  }
 
   &--mulitple-nested {
     position: relative;

@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject, IScrollTrackerSettings } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject, ScrollTrackerSettings } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SourceCodeReference } from "../SourceCodeReference";
@@ -13,7 +13,7 @@ function ParallaxExample() {
   const refElem2 = useRef(null);
   const refElem3 = useRef(null);
 
-  const parallaxSettings: IScrollTrackerSettings = {
+  const parallaxSettings: ScrollTrackerSettings = {
     duration: {
       distance: 100,
       unit: "%",
@@ -31,23 +31,23 @@ function ParallaxExample() {
       <SourceCodeReference name='ParallaxExample' filePath='trackers/ParallaxExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <>
               <ScrollTracker scrollData={scrollData} elem={refElem1} settings={parallaxSettings}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return <ParallaxHorizontalSpring progress={scrollObject.progress} ref={refElem1} />;
                 }}
               </ScrollTracker>
 
               <ScrollTracker scrollData={scrollData} elem={refElem2} settings={parallaxSettings}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return <ParallaxVerticalSpringA progress={scrollObject.progress} ref={refElem2} />;
                 }}
               </ScrollTracker>
 
               <ScrollTracker scrollData={scrollData} elem={refElem3} settings={parallaxSettings}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return <ParallaxVerticalSpringB progress={scrollObject.progress} ref={refElem3} />;
                 }}
               </ScrollTracker>

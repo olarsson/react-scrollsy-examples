@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { BasicProgress } from "../spring-components/BasicProgress";
 
@@ -15,7 +15,7 @@ function DocumentScrollExample() {
       <SourceCodeReference name='DocumentScrollExample' filePath='trackers/DocumentScrollExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
@@ -27,7 +27,7 @@ function DocumentScrollExample() {
                   basedOn: "doc",
                 },
               }}>
-              {({ scrollObject }: IScrollObject) => {
+              {({ scrollObject }: ScrollObject) => {
                 return <BasicProgress progress={scrollObject.progress} ref={refElem} />;
               }}
             </ScrollTracker>

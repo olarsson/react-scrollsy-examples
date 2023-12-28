@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SourceCodeReference } from "../SourceCodeReference";
@@ -14,7 +14,7 @@ function BasicTriggerExample() {
       <SourceCodeReference name='BasicTriggerExample' filePath='trackers/BasicTriggerExample.tsx' />
       
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <>
               <ScrollTracker
@@ -28,7 +28,7 @@ function BasicTriggerExample() {
                     basedOn: "elem",
                   },
                 }}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return (
                     <div className='elem elem--basic-trigger' ref={refElem1}>
                       <div
@@ -58,7 +58,7 @@ function BasicTriggerExample() {
                     basedOn: "elem",
                   },
                 }}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return (
                     <div className='elem elem--basic-trigger' ref={refElem2}>
                       <div

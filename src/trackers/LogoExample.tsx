@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { LogoSpring } from "../spring-components/LogoSpring";
@@ -16,7 +16,7 @@ function LogoExample() {
       <ScrollTrackerDocument
         scrollThrottle={33} // 1000 ms/30 fps = 33ms, limits the triggered events to 30 fps, optional
       >
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
@@ -28,7 +28,7 @@ function LogoExample() {
                   basedOn: "doc",
                 },
               }}>
-              {({ scrollObject }: IScrollObject) => {
+              {({ scrollObject }: ScrollObject) => {
                 return <LogoSpring progress={scrollObject.progress} ref={refElem} />;
               }}
             </ScrollTracker>

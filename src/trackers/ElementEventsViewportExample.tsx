@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SourceCodeReference } from "../SourceCodeReference";
@@ -13,7 +13,7 @@ function ElementEventsViewportExample() {
       <SourceCodeReference name='ElementEventsViewportExample' filePath='trackers/ElementEventsViewportExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
@@ -31,7 +31,7 @@ function ElementEventsViewportExample() {
               onEnd={() => {
                 console.log("scroll progress ends for this element (offset affects this)");
               }}>
-              {({ scrollObject }: IScrollObject) => (
+              {({ scrollObject }: ScrollObject) => (
                 <div className='elem elem--events' ref={refElem}>
                   <div
                     className='elem__progress-bar'

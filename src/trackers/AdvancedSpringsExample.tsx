@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { BackgroundColorSpring } from "../spring-components/advanced/BackgroundColorSpring";
@@ -18,7 +18,7 @@ function AdvancedSpringsExample() {
       <SourceCodeReference name='AdvancedSpringsExample' filePath='trackers/AdvancedSpringsExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <>
               <ScrollTracker
@@ -41,7 +41,7 @@ function AdvancedSpringsExample() {
                     basedOn: "vp",
                   },
                 }}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return <MultipleStagesSpringTwo progress={scrollObject.progress} ref={refElem3} />;
                 }}
               </ScrollTracker>
@@ -55,7 +55,7 @@ function AdvancedSpringsExample() {
                     basedOn: "elem",
                   },
                 }}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return <BackgroundColorSpring progress={scrollObject.progress} ref={refElem1} />;
                 }}
               </ScrollTracker>
@@ -69,7 +69,7 @@ function AdvancedSpringsExample() {
                     basedOn: "elem",
                   },
                 }}>
-                {({ scrollObject }: IScrollObject) => {
+                {({ scrollObject }: ScrollObject) => {
                   return <MultipleStagesSpring progress={scrollObject.progress} ref={refElem2} />;
                 }}
               </ScrollTracker>

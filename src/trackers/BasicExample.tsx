@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SourceCodeReference } from "../SourceCodeReference";
@@ -13,7 +13,7 @@ function BasicExample() {
       <SourceCodeReference name='BasicExample' filePath='trackers/BasicExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
@@ -25,7 +25,7 @@ function BasicExample() {
                   basedOn: "elem",
                 },
               }}>
-              {({ scrollObject }: IScrollObject) => {
+              {({ scrollObject }: ScrollObject) => {
                 return (
                   <div className='elem elem--basic' ref={refElem}>
                     <div

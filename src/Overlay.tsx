@@ -1,6 +1,6 @@
 import { ScrollTrackerCustom, ScrollTracker } from "react-scrollsy";
 import { useRef } from "react";
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 function Overlay({ active = false }) {
   const refElem = useRef(null);
@@ -12,7 +12,7 @@ function Overlay({ active = false }) {
         key={active.toString()} // forces a rerender of the component, use this if you hide the element with 'display: none', otherwise height calculation of elements inside the container becomes convoluted
         scrollingElement='#custom-scroll-container'>
         {/* // scrollingElement={refCustomScrollContainer}> */}
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <div className='App'>
               <p>Im an overlay, scroll tracking can also be performed inside of me.</p>
@@ -26,7 +26,7 @@ function Overlay({ active = false }) {
                     basedOn: "elem",
                   },
                 }}>
-                {({ scrollObject }: IScrollObject) => (
+                {({ scrollObject }: ScrollObject) => (
                   <div className='elem overlay--progress' ref={refElem}>
                     <div
                       className='elem__progress-bar'

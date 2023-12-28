@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { SvgAnimation } from "../spring-components/SvgAnimation";
 
@@ -15,7 +15,7 @@ function ElementWithOffsetsExample() {
       <SourceCodeReference name='ElementWithOffsetsExample' filePath='trackers/ElementWithOffsetsExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
@@ -37,7 +37,7 @@ function ElementWithOffsetsExample() {
                   basedOn: "",
                 },
               }}>
-              {({ scrollObject }: IScrollObject) => {
+              {({ scrollObject }: ScrollObject) => {
                 return <SvgAnimation progress={scrollObject.progress} ref={refElem} />;
               }}
             </ScrollTracker>

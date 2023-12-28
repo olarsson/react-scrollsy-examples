@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import { IScrollData, IScrollObject } from "react-scrollsy/dist/types";
+import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SimpleSpring } from "../spring-components/SimpleSpring";
@@ -15,7 +15,7 @@ function MultipleAndNestedTrackersExample() {
       <SourceCodeReference name='MultipleAndNestedTrackersExample' filePath='trackers/MultipleAndNestedTrackersExample.tsx' />
 
       <ScrollTrackerDocument>
-        {({ scrollData }: IScrollData) => {
+        {({ scrollData }: ScrollData) => {
           return (
             <ScrollTracker
               scrollData={scrollData}
@@ -27,7 +27,7 @@ function MultipleAndNestedTrackersExample() {
                   basedOn: "vp",
                 },
               }}>
-              {({ scrollObject }: IScrollObject) => {
+              {({ scrollObject }: ScrollObject) => {
                 return (
                   <div className='elem elem--mulitple-nested' ref={refElem1}>
                     <div
@@ -50,7 +50,7 @@ function MultipleAndNestedTrackersExample() {
                           basedOn: "elem",
                         },
                       }}>
-                      {({ scrollObject: scrollObjectNested }: IScrollObject) => {
+                      {({ scrollObject: scrollObjectNested }: ScrollObject) => {
                         return <SimpleSpring progress={scrollObjectNested.progress} ref={refElem2} />;
                       }}
                     </ScrollTracker>

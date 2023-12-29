@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import type { ScrollData, ScrollObject, ScrollTrackerSettings } from "react-scrollsy/dist/types";
+import { ScrollData, ScrollObject, ScrollTrackerSettings } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SourceCodeReference } from "../SourceCodeReference";

@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
+import { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { BackgroundColorSpring } from "../spring-components/advanced/BackgroundColorSpring";

@@ -1,6 +1,6 @@
 import { ScrollTrackerDocument, ScrollTracker } from "react-scrollsy";
 
-import type { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
+import { ScrollData, ScrollObject } from "react-scrollsy/dist/types";
 
 import { useRef } from "react";
 import { SimpleSpring } from "../spring-components/SimpleSpring";

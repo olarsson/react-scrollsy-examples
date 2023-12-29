@@ -48,9 +48,15 @@ function Layout() {
           </li>
           <li>
             <Link to='/react-scrollsy-examples/parallax'>Parallax</Link>
+            <span>
+              Also uses: <span className='color-blush'>react-spring</span> / none
+            </span>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/horizontal-slider'>Horizontal slider</Link>
+            <span>
+              Also uses: <span className='color-blush'>react-spring</span>
+            </span>
           </li>
           <li>
             <Link to='/react-scrollsy-examples/advanced-springs'>Advanced springs (mulitple animations with interpolations)</Link>
